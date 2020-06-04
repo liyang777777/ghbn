@@ -9,16 +9,7 @@ Vue.use(VueRouter)
 // path name component 都是自己定义的
 //  通常情况下 这三个都是一样的(除首页之外)
 //  除了首页和公共组件之外  其余的组件都是通过异步加载的方式引入
-//  异步加载:  如果我没有访问这个路由  就不会加载这个组件  节约性能
-//  配置一个错误页面  所有路径不匹配的时候去加载这个组件(err或者404)
-//  一定要配置在所有路径的最后面  是routes这个数组的最后一项
-//  重定向 redirect:  跟要重定向的路径
-//  如果是二级路径  一定要把一级路径重定向
   const routes = [
-   {
-     path: '/home',
-     redirect: '/'
-   },
   {
     path: '/',
     name: 'Home',
@@ -32,12 +23,7 @@ Vue.use(VueRouter)
   {
     path: '/detail',
     name: 'Detail',
-    component: () => import('../views/Detail/detail' )
-  },
-  {
-    path: '*',
-    
-    component: () => import('../views/Err/err')
+    component: () => import('../views/Detail/detail')
   }
 ]
 
