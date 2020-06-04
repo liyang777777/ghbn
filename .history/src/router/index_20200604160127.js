@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
-// routes 是用来配置路由的
+// routes 是用来配置路由的 
 // 基础部分有3个: path: 路径  name: 路由的名字  component: 组件
 // /代表根路径  通常是首页
 // path name component 都是自己定义的
